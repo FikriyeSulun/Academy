@@ -2,9 +2,9 @@
 
 export default function Instructors() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <>
+      eğitmenler
+    </>
+  )
 }

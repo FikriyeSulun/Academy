@@ -2,9 +2,9 @@
 
 export default function ToApply() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <>
+      başvur
+    </>
+  )
 }

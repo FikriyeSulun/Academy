@@ -1,10 +1,10 @@
-// Kişisel verilerin kurunma kanunu sayfası
+// Kişisel verilerin korunması kanunu sayfası
 
 export default function PDPL() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <>
+      Kişisel verilerin korunması
+    </>
+  )
 }

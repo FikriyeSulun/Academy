@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 // pages
 import Home from './pages/Home'
+import Trainings from './pages/Trainings'
+import Instructors from './pages/Instructors'
 import Login from './pages/Login'
 import ToApply from './pages/ToApply'
 import Contact from './pages/Contact'
@@ -13,7 +15,7 @@ import PDPL from './pages/PDPL'
 import Container from './components/Container'
 
 // css
-import './index.css'
+import './main.css'
 
 
 const router = createBrowserRouter([
@@ -25,42 +27,50 @@ const router = createBrowserRouter([
         index: true,
         element: <Container />
       },
-      {
-        path: "to-apply",
-        element: <ToApply />,
-      },
 
-      //----------- her biri için özel isimler gerekiyor
-      //---------- 4 kategori - 15 eğitim - 54 eğitmen sayfası oluşturulacak
+
+      //-----------    NOTLAR    ------------
+      //---------- 4 kategori - 15 eğitim - en az 54 eğitmen sayfası olucak
       /*---------- örnek: 
       
-      path: "televizyon"
-      path: "gastronomi"
+      eğitim kategorilerini bu şekilde ekle
+      path: "instructors/televizyon"
+      path: "instructors/gastronomi"
 
-      path: "televizyon/i̇leri-televizyonculuk-eğitimi"
+      eğitimleri bu şekilde ekle
+      path: "instructors/televizyon/i̇leri-televizyonculuk-eğitimi"
       
-      path: "eğitmenler" hangi kategoride eğitmen olduğunu gösteren sayfa
-      path: "eğitmenler/mehmet-yalcinkaya"
+      eğitmneleri bu şekilde ekle
+      path: "trainings/mehmet-yalcinkaya"
 
       */
 
+      //header
       // {
-      //   path: "training-categories",
-      //   element: <TrainingCategories/>,
-      // },
-      // {
-      //   path: "trainings",
-      //   element: <Trainings/>,
-      // },
-      // {
-      //   path: "instructors",
-      //   element: <Instructors/>,
-      // },
-
+      //// eğitmenlerin hangi kategoride eğitim verdiğini gösteren sayfa
+      {
+        path: "trainings",   
+        element: <Trainings/>,
+      },
+      {
+        path: "instructors",
+        element: <Instructors/>,
+      },
       {
         path: "contact",
         element: <Contact />,
       },
+      {
+        path: "to-apply",
+        element: <ToApply />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+
+
+      //footer
       {
         path: "privacy-policy",
         element: <PrivacyPolicy />,
@@ -69,12 +79,12 @@ const router = createBrowserRouter([
         path: "personal-data-protection-law",
         element: <PDPL />,
       },
+
+
+
     ]
   },
-  {
-    path: "login",
-    element: <Login />,
-  },
+
 ]);
 
 

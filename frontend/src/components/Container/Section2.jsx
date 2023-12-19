@@ -1,9 +1,10 @@
+import React from 'react';
 
 export default function Section2() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <section>
+      section1
+    </section>
+  )
 }

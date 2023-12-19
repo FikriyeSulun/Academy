@@ -2,9 +2,9 @@
 
 export default function Trainings() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <>
+      eğitimler
+    </>
+  )
 }

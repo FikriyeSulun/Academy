@@ -2,9 +2,9 @@
 
 export default function Login() {
 
-    return (
-        <>
-             
-        </>
-    )
+  return (
+    <>
+      giriş yap
+    </>
+  )
 }

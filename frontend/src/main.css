@@ -1,0 +1,84 @@
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+:root {
+  --font-primary: "DM Sans", sans-serif;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-gray-600: #101112;
+  --color-gray-550: #1c1d1f;
+  --color-gray-500: #2d2f31;
+  --color-gray-400: #3e4143;
+  --color-gray-300: #6a6f73;
+  --color-gray-250: #9da3a7;
+  --color-gray-200: #d1d7dc;
+  --color-gray-150: #e4e8eb;
+  --color-gray-100: #f7f9fa;
+  --color-red-500: #612012;
+  --color-red-400: #b32d0f;
+  --color-red-300: #f4522d;
+  --color-red-250: #ef8e70;
+  --color-red-200: #fcbca0;
+  --color-red-150: #fbd5c4;
+  --color-red-100: #fbece9;
+
+  --color-blue-700: #202124;
+  --color-blue-650: #242239;
+  --color-blue-600: #140342;
+  --color-blue-500: #1a064f;
+  --color-blue-450: #311f61;
+  --color-blue-400: #282664;
+  --color-blue-250: #4f547b;
+  --color-blue-200: #6a7a99;
+  --color-blue-100: #eae9ef;
+  --color-blue-80: #f3f6f9;
+
+  --bs-gutter-x: 30px;
+  --bs-gutter-y: 0;
+}
+
+
+body {
+  max-width: 100%;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-blue-250);
+  overflow-x: hidden; /* yatayda taşma durumunu gözükmesini scroll çıkmasını engeller*/
+}
+
+a {
+  color: inherit !important;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  transition: color .2s ease-in-out;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+
+/* text color */
+.text-white {
+  color: var(--color-white) !important;
+}
+
+
+/* page alignment */
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1530px;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}

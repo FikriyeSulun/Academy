@@ -4,7 +4,7 @@ export default function Contact() {
 
     return (
         <>
-             
+          iletişim   
         </>
     )
 }
