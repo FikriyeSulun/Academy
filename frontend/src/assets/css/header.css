@@ -110,11 +110,20 @@ header {
   gap: 10px;
 }
 
-
 /* subnav */
+.subnav-container {
+  top: 10px;
+  margin-right: 60px;
+  position: relative;
+  display: flex;
+}
+
 .subnav {
+  display: flex;
   position: absolute;
   top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-white);
   border-radius: 8px;
   color: var(--color-black) !important;
@@ -125,35 +134,48 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: all .2s cubic-bezier(.215, .61, .355, 1);
+  width: max-content;
 
   & li {
+    width: 100%;
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 7px 16px !important;
 
     & a {
       display: flex;
       align-items: center;
-      padding: 10px 30px !important;
 
       & img {
         width: 20px;
       }
+    }
+
+    & .training-categories{
+      border-bottom: 1px solid black;
+      border-radius: 0;
+      padding-bottom: 22px;
+    }
+
+    & .subnav-training-list{
+      padding: 10px 0px 0px 0px !important;
     }
   }
 }
 
 .subnav:before {
   content: "";
-  position: absolute;
-  top: -5px;
-  left: 20px;
   width: 10px;
   height: 10px;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-white);
   transform: rotate(45deg);
 }
+
 
 
 
