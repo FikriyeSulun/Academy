@@ -33,7 +33,9 @@
   --color-blue-250: #4f547b;
   --color-blue-200: #6a7a99;
   --color-blue-100: #eae9ef;
+  --color-blue-90: #eef2f6;
   --color-blue-80: #f3f6f9;
+
 
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0;
@@ -46,7 +48,13 @@ body {
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-blue-250);
-  overflow-x: hidden; /* yatayda taşma durumunu gözükmesini scroll çıkmasını engeller*/
+  overflow-x: hidden;
+  /* yatayda taşma durumunu gözükmesini scroll çıkmasını engeller*/
+}
+
+main{
+  top: 95px;
+  position: relative;
 }
 
 a {
@@ -74,11 +82,17 @@ button {
 /* page alignment */
 .container {
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1530px;
+  max-width: 1490px;
 }
 
 .col-auto {
   flex: 0 0 auto;
   width: auto;
+}
+
+@media (max-width: 1530px) {
+
+  .container {
+      padding: 0 20px;
+  }
 }

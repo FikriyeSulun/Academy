@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
-import { supabase } from '../main'
+import { fetchTrainingCategories } from '../data/TrainingCategoriesData';
+import { fetchTrainings } from '../data/TrainingsData';
 
 export default function Header() {
   const [trainingCategories, setTrainingCategories] = useState([]);
@@ -9,48 +10,56 @@ export default function Header() {
 
   //Sayfa yüklendiğinde Supabasedeki 
   useEffect(() => {
-    // TrainingCategories tablosundan verileri çeker
-    async function fetchTrainingCategories() {
-      try {
-        const { data: TrainingCategories, error } = await supabase
-          .from('TrainingCategories').select('*');
+    // TrainingCategories tablosundan verileri TrainingCategoriesData içinden fetchTrainingCategories ile getirir
+    fetchTrainingCategories().then((categories) => {
+      setTrainingCategories(categories);
+    });
 
-        // console.log(TrainingCategories);
+    // // TrainingCategories tablosundan verileri çeker
+    // async function fetchTrainingCategories() {
+    //   try {
+    //     const { data: TrainingCategories, error } = await supabase
+    //       .from('TrainingCategories').select('*');
 
-        if (error) {
-          throw error;
-        }
+    //     // console.log(TrainingCategories);
 
-        setTrainingCategories(TrainingCategories);
-      }
-      catch (error) {
-        console.error('Eğitim Kategorileri alınırken hata oluştu:', error.message)
-      }
-    }
-    fetchTrainingCategories();
+    //     if (error) {
+    //       throw error;
+    //     }
+
+    //     setTrainingCategories(TrainingCategories);
+    //   }
+    //   catch (error) {
+    //     console.error('Eğitim Kategorileri alınırken hata oluştu:', error.message)
+    //   }
+    // }
+    // fetchTrainingCategories();
+
+    fetchTrainings().then((trainings) => {
+      setTrainings(trainings);
+    });
 
     // Trainings tablosundan verileri çeker
-    async function fetchTraining() {
-      try {
-        const { data: Trainings, error } = await supabase
-          .from('Trainings').select('*');
+    // async function fetchTrainings() {
+    //   try {
+    //     const { data: Trainings, error } = await supabase
+    //       .from('Trainings').select('*');
 
-        if (error) {
-          throw error;
-        }
+    //     if (error) {
+    //       throw error;
+    //     }
 
-        setTrainings(Trainings);
-      }
-      catch (error) {
-        console.error('Eğitim bilgileri alınırken hata oluştu:', error.message)
-      }
-    }
-    fetchTraining();
+    //     setTrainings(Trainings);
+    //   }
+    //   catch (error) {
+    //     console.error('Eğitim bilgileri alınırken hata oluştu:', error.message)
+    //   }
+    // }
+    // fetchTrainings();
 
   }, [])
 
   // console.log(trainingCategories);
-
 
   return (
     <header>
@@ -71,7 +80,7 @@ export default function Header() {
                   Eğitimler
                   <i className="fa-solid fa-chevron-down"></i>
                 </Link>
-                <div class="subnav-container">
+                <div className="subnav-container">
                   <ul className='subnav'>
 
                     {trainingCategories.map(category => (
@@ -114,7 +123,7 @@ export default function Header() {
                       <img src="./src/assets/images/subnav icons/software.svg" alt="" />Yazılım
                     </Link>
                   </li> */}
-                  
+
                   </ul>
                 </div>
               </li>
@@ -124,7 +133,7 @@ export default function Header() {
                   Eğitmenler
                   <i className="fa-solid fa-chevron-down"></i>
                 </Link>
-                <div class="subnav-container">
+                <div className="subnav-container">
                   <ul className='subnav'>
                     {/* <li className='inActiveMenu'>
                                         <Link to={"/instructors/television/..."}>
@@ -148,7 +157,6 @@ export default function Header() {
             <Link className='text-white -underline loginBtn' to={"/login"}>Giriş yap</Link>
           </div>
         </div>
-
 
       </div>
     </header>
