@@ -29,7 +29,7 @@ export default function Section2() {
   };
 
   const filteredTrainings = selectedCategory
-    ? trainings.filter(training => training.category === selectedCategory)
+    ? trainings.filter(training => training.category_id === selectedCategory)
     : trainings;
 
   const filteredCategory = selectedCategory
@@ -37,10 +37,10 @@ export default function Section2() {
     : trainingCategories;
 
   return (
-    <section className='all-training'>
+    <section className='all-trainings'>
       <div className="container">
 
-        <div className="training-header">
+        <div className="trainings-header">
           <h3>ACUNMEDYA AKADEMİ EĞİTİMLERİ</h3>
         </div>
 

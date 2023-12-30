@@ -1,9 +1,9 @@
-.all-training {
+.all-trainings {
     position: relative;
     padding: 90px 0;
 }
 
-.training-header {
+.trainings-header {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;

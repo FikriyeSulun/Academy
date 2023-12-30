@@ -85,12 +85,12 @@ export default function Header() {
 
                     {trainingCategories.map(category => (
                       <li className='inActiveMenu' key={category.id}>
-                        <Link className='training-categories' to={`/trainings/${category.name.toLowerCase()}`}>
+                        <Link className='training-categories-header' to={`/trainings/${category.name.toLowerCase()}`}>
                           <img src={`./src/assets/images/subnav icons/${category.en_name.toLowerCase()}.svg`} alt="" />{category.name}
                         </Link>
 
                         <div>
-                          {trainings.filter(training => training.category === category.id).map(training => (
+                          {trainings.filter(training => training.category_id === category.id).map(training => (
                             <li className='inActiveMenu subnav-training-list' key={training.id}>
                               <Link to={`/trainings/${category.name.toLowerCase()}`}>
                                 {training.name}

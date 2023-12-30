@@ -2,7 +2,7 @@ import React from 'react';
 
 import { supabase } from '../main'
 
-// TrainingCategories tablosundan verileri çeker
+// Trainings tablosundan verileri çeker
 export async function fetchTrainings() {
     try {
         const { data: Trainings, error } = await supabase

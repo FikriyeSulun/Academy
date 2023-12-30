@@ -1,0 +1,130 @@
+.all-instructors {
+    position: relative;
+    padding: 90px 0;
+}
+
+.instructors-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.instructor-cards {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* slider */
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: -webkit-fill-available;
+
+    & .slider {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        transition: transform 0.5s;
+    }
+}
+
+.instructors-card {
+    width: 299.5px;
+    padding-right: calc(var(--wd-car-sp)/2);
+    padding-left: calc(var(--wd-car-sp)/2);
+    position: relative;
+    float: left;
+    min-height: 1px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+
+    & .instructors-bg-img {
+        transition: transform .5s cubic-bezier(0, 0, .44, 1.18);
+        background-position: center;
+        object-position: center;
+
+        & img {
+            width: 300px;
+            height: 400px;
+        }
+    }
+
+    & .instructors-title {
+        transition: background-color .5s cubic-bezier(0, 0, .44, 1.18);
+        z-index: 2;
+        display: flex;
+        overflow: hidden;
+        padding: 30px;
+        border-radius: 0px;
+        position: absolute;
+        justify-content: flex-start;
+        align-items: flex-end;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        & .instructors-info {
+            position: relative;
+            width: 100%;
+            max-width: var(--content-width);
+            --text-align: left;
+            text-align: left;
+            --content-align: flex-start;
+
+            & h3 {
+                color: #fff;
+            }
+
+            & h4 {
+                color: rgba(255, 255, 255, .8);
+            }
+        }
+    }
+}
+
+.instructors-card:hover {
+    & .instructors-bg-img {
+        transform: scale(1.2);
+    }
+
+    & .instructors-title {
+        background-color: rgba(0, 0, 0, .3);
+    }
+}
+
+.instructors-bg-img :is(img, picture) {
+    width: 100%;
+    height: var(--wd-img-height);
+    object-fit: cover;
+    object-position: inherit;
+}
+
+
+
+/* Slider buttons */
+.prev-button,
+.next-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
