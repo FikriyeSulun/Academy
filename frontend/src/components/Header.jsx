@@ -63,20 +63,20 @@ export default function Header() {
 
   return (
     <header>
-      <div className="container header-bottom">
+      <div className="container header-bottom text-white">
         <div className="headerContent">
           <div className="headerLogo col-auto">
-            <Link className='text-white' to={"/"}><img src="../src/assets/images/logo/header_logo.png" alt="logo" />
+            <Link to={"/"}><img src="../src/assets/images/logo/header_logo.png" alt="logo" />
               Acunmedya Akademi</Link>
           </div>
           <div className="headerMenu col-auto">
             <ul className='headerMenuList'>
               <li>
-                <Link className="text-white activeMenu" to={"/"} > Ana Sayfa </Link>
+                <Link className=" activeMenu" to={"/"} > Ana Sayfa </Link>
               </li>
 
               <li className="menu-item-has-children">
-                <Link className="text-white" to={"/trainings"} >
+                <Link to={"/trainings"} >
                   Eğitimler
                   <i className="fa-solid fa-chevron-down"></i>
                 </Link>
@@ -129,7 +129,7 @@ export default function Header() {
               </li>
 
               <li className="menu-item-has-children">
-                <Link className="text-white" to={"/instructors"} >
+                <Link to={"/instructors"} >
                   Eğitmenler
                   <i className="fa-solid fa-chevron-down"></i>
                 </Link>
@@ -145,16 +145,16 @@ export default function Header() {
               </li>
 
               <li>
-                <Link className="text-white inActiveMenuTwo" to={"/contact"} > İletişim </Link>
+                <Link className="inActiveMenuTwo" to={"/contact"} > İletişim </Link>
               </li>
             </ul>
           </div>
           <div className="headerRight col-auto">
-            <button className='text-white hamburgerMenuBtn' >
+            <button className='hamburgerMenuBtn text-white' >
               <i className="fa-solid fa-bars"></i>MENU
             </button>
             <Link className='blueBtn toapplyBtn' to={"/to-apply"}>Başvuru yap</Link>
-            <Link className='text-white -underline loginBtn' to={"/login"}>Giriş yap</Link>
+            <Link className='-underline loginBtn' to={"/login"}>Giriş yap</Link>
           </div>
         </div>
 
