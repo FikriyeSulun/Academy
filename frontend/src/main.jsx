@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { createClient } from '@supabase/supabase-js'
 
-// pages
-// management panel
+// management panel pages
 import ManagementPanel from './pages/ManagementPanel'
 
 import TrainingCategoriesInfo from './pages/Management Panel/TrainingCategories/TrainingCategoriesInfo'
@@ -19,18 +18,19 @@ import UsersInfo from './pages/Management Panel/Users/UsersInfo'
 import CreateUser from './pages/Management Panel/Users/CreateUser'
 import UpdateUser from './pages/Management Panel/Users/UpdateUser'
 
-// public
-import Home from './pages/Home'
+// public pages
+import Layout from './pages/Layout'
 import Trainings from './pages/Trainings'
-import Instructors from './pages/Instructors'
+import TrainingCategoriesDetail from './pages/TrainingCategoriesDetail'
+import InstructorDetail from './pages/InstructorDetail'
 import Login from './pages/Login'
 import ToApply from './pages/ToApply'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import PDPL from './pages/PDPL'
 
-// components
-import Container from './components/Container'
+// container components
+import Home from './pages/Home'
 
 // css
 import './main.css'
@@ -45,11 +45,11 @@ export const supabase = createClient(url, secretKey);
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
         index: true,
-        element: <Container />
+        element: <Home />
       },
 
       // Management Panel
@@ -107,10 +107,10 @@ const router = createBrowserRouter([
       path: "instructors/gastronomi"
 
       eğitimleri bu şekilde ekle
-      path: "instructors/televizyon/i̇leri-televizyonculuk-eğitimi"
+      path: "trainings/televizyon/i̇leri-televizyonculuk-eğitimi"
       
-      eğitmneleri bu şekilde ekle
-      path: "trainings/mehmet-yalcinkaya"
+      eğitmenleri bu şekilde ekle
+      path: "instructors/gastronomi/mehmet-yalçınkaya"
 
       */
 
@@ -122,8 +122,16 @@ const router = createBrowserRouter([
         element: <Trainings/>,
       },
       {
-        path: "instructors",
-        element: <Instructors/>,
+        path: "trainings/:slugCategories",   
+        element: <TrainingCategoriesDetail/>,
+      },
+      // {
+      //   path: "trainings/:slugCategories/:slugTrainings",   
+      //   element: <TrainingDetail/>,
+      // },
+      {
+        path: "instructors/:slugCategories/:slugInstructors",
+        element: <InstructorDetail/>,
       },
       {
         path: "contact",

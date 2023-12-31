@@ -1,0 +1,16 @@
+.instructor-container{
+    display: flex;
+    justify-content: center;
+}
+
+.instructor-content{
+    z-index: 1;
+    position: absolute;
+}
+
+.instructor-bg-img{
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    padding-left: -100px;
+}

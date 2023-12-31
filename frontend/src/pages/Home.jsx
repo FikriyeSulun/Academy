@@ -1,15 +1,20 @@
-// Anasayfa
-import { Outlet } from "react-router-dom";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from 'react';
 
-export default function Home() {
+import Section1 from "../components/Container/Section1";
+import Section2 from "../components/Container/Section2";
+import Section3 from "../components/Container/Section3";
+import Section4 from "../components/Container/Section4";
+import Section5 from "../components/Container/Section5";
+
+export default function Container() {
 
   return (
     <>
-      <Header />
-      <main><Outlet /></main>
-      <Footer />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
     </>
   )
 }

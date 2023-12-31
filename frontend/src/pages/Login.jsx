@@ -19,7 +19,7 @@ export default function Login() {
     })
 
     if (error) {
-      alert('Böyle bir kullanıcı bulunamadı ya da Hatalı kullanıcı adı veya hatalı şifre girişi yaptınız.');
+      alert('Böyle bir kullanıcı bulunamadı. Hatalı kullanıcı adı veya hatalı şifre girişi yapmış olabilirsiniz.');
     }
 
     navigate('/');

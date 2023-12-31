@@ -51,7 +51,7 @@ export default function Section3() {
               {
                 cardsToShow.map(instructor => (
                   <div className="instructors-card" key={instructor.id}>
-                    <Link to={`/instructors/${instructor.categoryName.toLowerCase()}/${instructor.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <Link to={`/instructors/${instructor.categoryName.toLowerCase()}/${instructor.urlName}`}>
 
                       <div className="instructors-bg-img">
                         <img src={instructor.photoURL} alt={instructor.name} />

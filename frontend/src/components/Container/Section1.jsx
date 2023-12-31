@@ -5,7 +5,7 @@ export default function Section1() {
   return (
     <section className='masthead'>
       <div className="masthead-bg">
-        <img src="../../src/assets/images/section1/bg.webp" alt="image" loading='lazy' />
+        <img src="/images/section1/bg.webp" alt="image" loading='lazy' />
       </div>
 
       <div className="container">

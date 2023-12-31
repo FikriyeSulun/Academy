@@ -26,9 +26,10 @@ export async function fetchInstructors() {
         const instructorsWithPhotoURL = await Promise.all(
 
             Instructors.map(async (instructor) => {
-                const englishName = turkishToEnglish(instructor.name.toLowerCase().replace(/\s+/g, '-'));
+                const urlName = instructor.name.toLowerCase().replace(/\s+/g, '-');
+                const englishUrlName = turkishToEnglish(instructor.name.toLowerCase().replace(/\s+/g, '-'));
                 //küçük harfe çevrildi ve boşluklara - koyuldu
-                const photoURL = `https://jxclitqaeokejtukmuof.supabase.co/storage/v1/object/public/instructors/${englishName}.jpg`;
+                const photoURL = `https://jxclitqaeokejtukmuof.supabase.co/storage/v1/object/public/instructors/${englishUrlName}.jpg`;
 
                 // Eğitmenin hangi eğitim kategorisine ait olduğunu buluyoruz.
                 const category = categoryNames.find((category) => category.id === instructor.category_id);
@@ -36,7 +37,7 @@ export async function fetchInstructors() {
 
                 // instructor ve fotoğrafların url'leri instructorsWithPhotoURL içine eklendi.
                 // categoryName ile eğitmenlere ait bulunan kategoriler instructorsWithPhotoURL içine eklendi
-                return { ...instructor, photoURL, categoryName: category ? category.name : ''  };
+                return { ...instructor, photoURL, categoryName: category ? category.name : '', urlName, englishUrlName  };
             })
         );
 

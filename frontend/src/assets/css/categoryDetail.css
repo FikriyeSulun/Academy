@@ -1,0 +1,56 @@
+.trainingCategories-container{
+    display: flex;
+    justify-content: center;
+}
+
+.trainingCategories-content {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    color: var(--color-white);
+    margin: 0 20px;
+
+    & .category-header {
+        font-size: 28px;
+    }
+
+    & .category-title-text {
+        max-width: 800px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* responsive */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .trainingCategories-content {
+        gap: 30px;
+
+        & .category-header {
+            font-size: 22px;
+        }
+
+        & .category-title-text {
+            font-size: 15px;
+        }
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .trainingCategories-content {
+        gap: 20px;
+
+        & .category-header {
+            font-size: 18px;
+        }
+
+        & .category-title-text {
+            font-size: 13px;
+        }
+    }
+  
+  }

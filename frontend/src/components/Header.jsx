@@ -66,7 +66,7 @@ export default function Header() {
       <div className="container header-bottom text-white">
         <div className="headerContent">
           <div className="headerLogo col-auto">
-            <Link to={"/"}><img src="../src/assets/images/logo/header_logo.png" alt="logo" />
+            <Link to={"/"}><img src="/images/logo/header_logo.png" alt="logo" />
               Acunmedya Akademi</Link>
           </div>
           <div className="headerMenu col-auto">
@@ -86,17 +86,19 @@ export default function Header() {
                     {trainingCategories.map(category => (
                       <li className='inActiveMenu' key={category.id}>
                         <Link className='training-categories-header' to={`/trainings/${category.name.toLowerCase()}`}>
-                          <img src={`./src/assets/images/subnav icons/${category.en_name.toLowerCase()}.svg`} alt="" />{category.name}
+                          <img src={`/images/subnav icons/${category.en_name.toLowerCase()}.svg`} alt="" />{category.name}
                         </Link>
 
                         <div>
-                          {trainings.filter(training => training.category_id === category.id).map(training => (
-                            <li className='inActiveMenu subnav-training-list' key={training.id}>
-                              <Link to={`/trainings/${category.name.toLowerCase()}`}>
-                                {training.name}
-                              </Link>
-                            </li>
-                          ))}
+                          <ul>
+                            {trainings.filter(training => training.category_id === category.id).map(training => (
+                              <li className='inActiveMenu subnav-training-list' key={training.id}>
+                                <Link to={`/trainings/${category.name.toLowerCase()}`}>
+                                  {training.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
 
                       </li>
@@ -105,22 +107,22 @@ export default function Header() {
 
                     {/* <li className='inActiveMenu'>
                     <Link to={"/trainings/television"}>
-                      <img src="./src/assets/images/subnav icons/television.svg" alt="" />Televizyon
+                      <img src="/images/subnav icons/television.svg" alt="" />Televizyon
                     </Link>
                   </li>
                   <li className='inActiveMenu'>
                     <Link to={"/trainings/gastronomy"}>
-                      <img src="./src/assets/images/subnav icons/gastronomy.svg" alt="" />Gastronomi
+                      <img src="/images/subnav icons/gastronomy.svg" alt="" />Gastronomi
                     </Link>
                   </li>
                   <li className='inActiveMenu'>
                     <Link to={"/trainings/digital"}>
-                      <img src="./src/assets/images/subnav icons/digital.svg" alt="" />Dijital
+                      <img src="/images/subnav icons/digital.svg" alt="" />Dijital
                     </Link>
                   </li>
                   <li className='inActiveMenu'>
                     <Link to={"/trainings/software"}>
-                      <img src="./src/assets/images/subnav icons/software.svg" alt="" />Yazılım
+                      <img src="/images/subnav icons/software.svg" alt="" />Yazılım
                     </Link>
                   </li> */}
 

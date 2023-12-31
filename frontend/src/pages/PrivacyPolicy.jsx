@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     <div className='PrivacyPolicy'>
       <div className='PrivacyPolicyHeader'>
         <div className="PrivacyPolicyHeaderBg">
-          <img src="../src/assets/images/PrivacyPolicyTopBg.jpg" alt="" />
+          <img src="/images/PrivacyPolicyTopBg.jpg" alt="" />
         </div>
         <div className='PrivacyPolicyHeaderTitle'>
           <h2>GİZLİLİK POLİTİKASI</h2>

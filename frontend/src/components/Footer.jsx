@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-header footer-hr">
           <div className="footer-header-left">
             <div className="footerLogo col-auto">
-              <Link to={"/"}><img src="../src/assets/images/logo/footer_logo.png" alt="logo" /></Link>
+              <Link to={"/"}><img src="/images/logo/footer_logo.png" alt="logo" /></Link>
             </div>
 
             <div className="document">
@@ -23,10 +23,10 @@ export default function Footer() {
           <div className="footer-header-socials col-auto">
             <div className="footer-header-socials__title">Follow us on social media</div>
             <div className="footer-header-socials__list">
-              <Link to={"https://www.facebook.com/acunmedyaakademi/"}><img className='facebook' src="../src/assets/images/footer/social/facebook-f.svg" alt="" /></Link>
-              <Link to={"https://twitter.com/acunmedyakademi"}><img className='twitter' src="../src/assets/images/footer/social/twitter.svg" alt="" /></Link>
-              <Link to={"https://www.instagram.com/acunmedyaakademi/"}><img className='instagram' src="../src/assets/images/footer/social/instagram.svg" alt="" /></Link>
-              <Link to={"https://www.linkedin.com/school/acun-medya-akademi/"}><img className='linkedin' src="../src/assets/images/footer/social/linkedin-in.svg" alt="" /></Link>
+              <Link to={"https://www.facebook.com/acunmedyaakademi/"}><img className='facebook' src="/images/footer/social/facebook-f.svg" alt="" /></Link>
+              <Link to={"https://twitter.com/acunmedyakademi"}><img className='twitter' src="/images/footer/social/twitter.svg" alt="" /></Link>
+              <Link to={"https://www.instagram.com/acunmedyaakademi/"}><img className='instagram' src="/images/footer/social/instagram.svg" alt="" /></Link>
+              <Link to={"https://www.linkedin.com/school/acun-medya-akademi/"}><img className='linkedin' src="/images/footer/social/linkedin-in.svg" alt="" /></Link>
             </div>
           </div>
         </div>

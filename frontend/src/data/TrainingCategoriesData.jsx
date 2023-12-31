@@ -14,7 +14,16 @@ export async function fetchTrainingCategories() {
             throw error;
         }
 
-        return TrainingCategories;
+        const trainingCategoriesWithPhotoURL = await Promise.all(
+            TrainingCategories.map(async (trainingCategories) => {
+                const photoURL = `https://jxclitqaeokejtukmuof.supabase.co/storage/v1/object/public/trainingCategories/${trainingCategories.en_name}.jpg`;
+
+                return { ...trainingCategories, photoURL };
+            })
+
+        )
+
+        return trainingCategoriesWithPhotoURL;
     }
     catch (error) {
         console.error('Eğitim Kategorileri alınırken hata oluştu:', error.message);
