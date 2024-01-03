@@ -22,7 +22,7 @@ header {
 
 /* header logo */
 .headerLogo {
-  
+
   & a {
     display: flex;
     flex-direction: row;
@@ -118,6 +118,7 @@ header {
 }
 
 .subnav {
+  max-height: 500px;
   display: flex;
   position: absolute;
   top: 100%;
@@ -151,15 +152,28 @@ header {
       }
     }
 
-    & .training-categories-header{
+    & .training-categories-header {
       border-bottom: 1px solid black;
       border-radius: 0;
       padding-bottom: 22px;
+      margin-bottom: 5px;
     }
 
-    & .subnav-training-list{
-      padding: 10px 0px 0px 0px !important;
+    & .training-categories-trainings,
+    .training-categories-instructors {
+      overflow: auto;
+
+      & .subnav-training-list, .subnav-instructor-list {
+        padding: 5px 0px !important;
+      }
+
+      & .subnav-training-list:hover, .subnav-instructor-list:hover {
+        border-radius: 10px;
+        background-color:#b9c7db;
+      }
     }
+
+
   }
 }
 

@@ -69,7 +69,7 @@ export default function Section2() {
                     key={training.id}
                     className={`training-card categorie${category.en_name?.toLowerCase()} swiper-slide`}
                   >
-                    <Link to={`/trainings/${category.name?.toLowerCase()}`}>
+                    <Link to={`/trainings/${training.categoryName.toLowerCase()}/${training.urlName}`}>
                       <div className="training-card_icon">
                         {/* {icon && <i className={icon}></i>} */}
                       </div>

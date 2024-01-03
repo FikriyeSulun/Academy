@@ -10,14 +10,14 @@ export default function Section3() {
   useEffect(() => {
 
     fetchInstructors().then((instructors) => {
-      console.log('Instructors:', instructors);
+      // console.log('Instructors:', instructors);
       setInstructors(instructors);
     });
 
   }, []);
 
   const totalCards = instructors.length;
-  console.log(totalCards)
+  // console.log(totalCards)
 
   const moveSlider = (direction) => {
     const newCard = currentCard + direction;

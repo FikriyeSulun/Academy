@@ -20,7 +20,7 @@ import UpdateUser from './pages/Management Panel/Users/UpdateUser'
 
 // public pages
 import Layout from './pages/Layout'
-import Trainings from './pages/Trainings'
+import TrainingDetail from './pages/TrainingDetail'
 import TrainingCategoriesDetail from './pages/TrainingCategoriesDetail'
 import InstructorDetail from './pages/InstructorDetail'
 import Login from './pages/Login'
@@ -28,6 +28,9 @@ import ToApply from './pages/ToApply'
 import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import PDPL from './pages/PDPL'
+
+// authorized pages
+import Course from './pages/Course'
 
 // container components
 import Home from './pages/Home'
@@ -118,17 +121,13 @@ const router = createBrowserRouter([
       // {
       //// eğitmenlerin hangi kategoride eğitim verdiğini gösteren sayfa
       {
-        path: "trainings",   
-        element: <Trainings/>,
-      },
-      {
         path: "trainings/:slugCategories",   
         element: <TrainingCategoriesDetail/>,
       },
-      // {
-      //   path: "trainings/:slugCategories/:slugTrainings",   
-      //   element: <TrainingDetail/>,
-      // },
+      {
+        path: "trainings/:slugCategories/:slugTrainings",   
+        element: <TrainingDetail/>,
+      },
       {
         path: "instructors/:slugCategories/:slugInstructors",
         element: <InstructorDetail/>,
@@ -144,6 +143,11 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+
+      {
+        path: "course",
+        element: <Course/>
       },
 
 

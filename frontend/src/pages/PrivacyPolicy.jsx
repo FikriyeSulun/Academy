@@ -4,22 +4,28 @@ import React from 'react';
 export default function PrivacyPolicy() {
 
   return (
-    <div className='PrivacyPolicy'>
+    <section className='PrivacyPolicy'>
+
       <div className='PrivacyPolicyHeader'>
-        <div className="PrivacyPolicyHeaderBg">
-          <img src="/images/PrivacyPolicyTopBg.jpg" alt="" />
-        </div>
+
         <div className='PrivacyPolicyHeaderTitle'>
           <h2>GİZLİLİK POLİTİKASI</h2>
           <p>Kişisel verileriniz; veri sorumlusu olarak YES A.Ş. tarafından işletilen internet sitesini www.acunmedyaakademi.com  ziyaret edenlerin gizliliğini korumak Kurumumuzun önde gelen ilkelerindendir. İnternet Sitesi Gizlilik Politikası ile; (1) Veri Sahiplerinin kişisel verilerinin işlenmesi, (2) Çerez Politikası, (3) Site İçeriği ve (4) Gizlilik Politikası’nda Değişiklik Yapılması hakkında açıklamalar yapılmaktadır.</p>
         </div>
+
+        <div className="PrivacyPolicyHeaderBg">
+          <img src="/images/PrivacyPolicyTopBg.jpg" alt="" />
+        </div>
+
       </div>
+
       <div className="container">
         <div className='PrivacyPolicyContent'>
           <ul>
             <li>
               <div>
                 <h4>1.VERİ SAHİPLERİNİN KİŞİSEL VERİLERİNİN İŞLENMESİ</h4>
+                <br />
                 <p>İnternet sitemizi ziyaret etmeniz sırasında elde edilen kişisel veriler Kurum tarafından 6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca aşağıda açıklanan kapsamda işlenebilecektir.
                   <br /><br />
                   Kişisel verilerinizin üniversitemiz tarafından işlenme amaçları konusunda detaylı bilgilere “www.acunmedyaakademi.com”  internet sitesinde yer alan “Kişisel Verilerin Korunması ve İşlenmesi Hakkında Aydınlatma Metni” üzerinden ulaşabilirsiniz.</p>
@@ -28,6 +34,7 @@ export default function PrivacyPolicy() {
             <li>
               <div>
                 <h4>KİŞİSEL VERİLERİNİZİN İŞLENME AMACI</h4>
+                <br />
                 <p>İnternet Sitemizi ziyaret etmeniz dolayısıyla elde edilen kişisel verileriniz aşağıda sıralanan amaçlarla Kurum tarafından KVK Kanunu’nun 5. ve 6. maddelerine uygun olarak işlenebilecektir:
                   <br /><br />
                   Kişisel verilerinizi, web sitesi ve mobil uygulamaları kullanımınızı, tercihlerinizi ve ilgi alanlarını analiz etmek gibi araştırma ve istatistiksel amaçlar için kullanılması,
@@ -46,18 +53,21 @@ export default function PrivacyPolicy() {
             <li>
               <div>
                 <h4>KİŞİSEL VERİLERİNİZİN AKTARILDIĞI TARAFLAR VE AKTARIM AMACI</h4>
+                <br />
                 <p>İnternet sitemizi ziyaret etmeniz dolayısıyla elde edilen kişisel verileriniz, kişisel verilerinizin işlenme amaçları doğrultusunda, iş ortaklarımıza, tedarikçilerimize kanunen yetkili kamu kurumlarına ve özel kişilere KVK Kanunu’nun 8. ve 9. maddelerinde belirtilen kişisel veri işleme şartları ve amaçları dahilinde aktarılabilecektir.</p>
               </div>
             </li>
             <li>
               <div>
                 <h4>KİŞİSEL VERİLERİNİZİN TOPLANMA YÖNTEMİ VE HUKUKİ SEBEBİ</h4>
+                <br />
                 <p>Kimliğinizi belirli ya da belirlenebilir kılan her türlü bilgi “kişisel veri”dir. İnternet sitemizi ziyaretiniz kapsamında kişisel verileriniz Kanun’da yer alan veri işleme şartlarına uygun olarak İnternet Sitemizi ziyaret etmeniz dolayısıyla teknik iletişim dosyaları olan çerezler (cookies) vasıtasıyla toplanmaktadır.</p>
               </div>
             </li>
             <li>
               <div>
                 <h4>VERİ SAHİPLERİNİN HAKLARI</h4>
+                <br />
                 <p>Kişisel veri sahibi olarak Kanun’un 11. maddesi uyarınca aşağıdaki haklara sahip olduğunuzu bildiririz:
                   <br /><br />
                   Kişisel veri işlenip işlenmediğini öğrenme,
@@ -84,6 +94,7 @@ export default function PrivacyPolicy() {
             <li>
               <div>
                 <h4>VERİ SAHİPLERİNİN KİŞİSEL VERİLERİNİN GÜVENLİĞİNİN SAĞLANMASINA YÖNELİK ALINAN TEDBİRLER</h4>
+                <br />
                 <p>Kurum tarafından kişisel verilerin korunmasına ve veri güvenliğinin sağlanmasına verilen önem doğrultusunda, Kanun’un 12. maddesine uygun olarak, Kurumumuz tarafından veri güvenliğinin sağlanması için,
                   <br /><br />
                   Kişisel verilerin hukuka aykırı olarak işlenmesini önlemek,
@@ -98,12 +109,14 @@ export default function PrivacyPolicy() {
             <li>
               <div>
                 <h4>2. ÇEREZ POLİTİKASI</h4>
+                <br />
                 <p>İnternet sitemizden en verimli şekilde faydalanabilmeniz ve kullanıcı deneyiminizi geliştirebilmek için Çerez kullanıyoruz. Çerez kullanılmasını tercih etmezseniz tarayıcınızın ayarlarından Çerezleri silebilir ya da engelleyebilirsiniz. Ancak bunun internet sitemizi kullanımınızı etkileyebileceğini hatırlatmak isteriz. Tarayıcınızdan Çerez ayarlarınızı değiştirmediğiniz sürece bu sitede çerez kullanımını kabul ettiğinizi varsayacağız.</p>
               </div>
             </li>
             <li>
               <div>
                 <h4>ÇEREZ NEDİR VE NEDEN KULLANILMAKTADIR?</h4>
+                <br />
                 <p>Çerezler, ziyaret ettiğiniz internet siteleri tarafından tarayıcılar aracılığıyla cihazınıza veya ağ sunucusuna depolanan küçük metin dosyalarıdır. Çerezler konusundan daha detaylı bilgi için: http://www.aboutcookies.org/ ve http://www.allaboutcookies.org/ adreslerini ziyaret edebilirsiniz.
                   <br /><br />
                   İnternet Sitemizde çerez kullanılmasının başlıca amaçları aşağıda sıralanmaktadır:
@@ -118,18 +131,21 @@ export default function PrivacyPolicy() {
             <li>
               <div>
                 <h4>3.SİTE İÇERİĞİ</h4>
+                <br />
                 <p>Üniversitemiz sitesinde olan bilgilerin eksiksiz, güncel ve doğru olduğunu garanti etmediği gibi önceden duyuru yapmadan site içerisindeki bilgileri zaman zaman değiştirme hakkına sahiptir. Bu bilgiler eğitim programları, öğrenci kabul ve kayıt koşulları, ücretler, burslar, konaklama imkanları ve başka konuları içerebilir. Ziyaretçilerin siteden edindikleri bilgilere güvenerek hareket etmeden önce, en güncel, eksiksiz ve güvenilir bilgiyi almak için üniversitenin ilgili fakülte ve bölümlerindeki uzman personel ile temasa geçmeleri önemlidir.</p>
               </div>
             </li>
             <li>
               <div>
                 <h4>4.GİZLİLİK POLİTİKASI’NDA DEĞİŞİKLİK YAPILMASI</h4>
+                <br />
                 <p>Gizlilik Politikası gerekli görülmesi halinde değiştirilebilir. Gizlilik Politikası güncellendiğinde web sitemizde duyurulacaktır.</p>
               </div>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+
+    </section>
   )
 }

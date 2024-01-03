@@ -1,0 +1,45 @@
+
+.PrivacyPolicyHeader, .PDPLHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.PrivacyPolicyHeaderBg, .PDPLHeaderBg{
+    position: relative;
+}
+
+.PrivacyPolicyHeaderTitle, .PDPLHeaderTitle{
+    width: 700px;
+    height: 255px;
+    position: absolute;
+    background-color:rgba(10,10,10,.59) ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.PrivacyPolicyContent, .PDPLContent {
+    padding: 50px 0;
+}
+
+.PrivacyPolicyContent ul, .PDPLContent ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.PrivacyPolicyContent li, .PDPLContent li {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.noneBorder-list{
+    border: none !important;
+    padding: 0 !important;
+}
