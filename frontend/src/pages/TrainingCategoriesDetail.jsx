@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-import { fetchTrainingCategories } from '../data/TrainingCategoriesData';
+import { getTrainingCategories } from "../data/getData";
 
 export default function TrainingCategoriesDetail() {
     const { slugCategories } = useParams();
@@ -11,7 +11,7 @@ export default function TrainingCategoriesDetail() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const trainingCategories = await fetchTrainingCategories();
+                const trainingCategories = await getTrainingCategories();
                 const selectedCategory = trainingCategories.find(category => category.name.toLowerCase() === slugCategories);
 
                 if (selectedCategory) {

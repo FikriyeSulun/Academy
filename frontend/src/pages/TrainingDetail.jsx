@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-import { fetchTrainings } from '../data/TrainingsData';
+import { getTrainings } from "../data/getData";
 
 export default function TrainingsDetail() {
   const { slugCategories, slugTrainings } = useParams();
@@ -12,7 +12,7 @@ export default function TrainingsDetail() {
 
     const fetchData = async () => {
       try {
-        const trainings = await fetchTrainings();
+        const trainings = await getTrainings();
         console.log(trainings)
         const selectedTraining = trainings.find(training => (training.urlName === slugTrainings && training.categoryName.toLowerCase() === slugCategories));
         console.log(selectedTraining)

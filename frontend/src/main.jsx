@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { createClient } from '@supabase/supabase-js'
 
 // management panel pages
 import ManagementPanel from './pages/ManagementPanel'
@@ -37,13 +36,6 @@ import Home from './pages/Home'
 
 // css
 import './main.css'
-
-// supabase
-const url = 'https://jxclitqaeokejtukmuof.supabase.co';
-const secretKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp4Y2xpdHFhZW9rZWp0dWttdW9mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDAzNDE3MjEsImV4cCI6MjAxNTkxNzcyMX0.JRP9sw_G4uBmpn8IfU9crtyQ_IL2wOQKUPgHo-5shTI';
-
-export const supabase = createClient(url, secretKey);
-
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,57 @@
+.management-panel {
+    display: flex;
+}
+
+.management-panel-content {
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & h2 {
+        font-size: 30px;
+        text-decoration: underline;
+    }
+
+    & a {
+        border: 1px solid var(--color-white);
+        background-color: var(--color-blue-100);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    & .management-panel-links {}
+}
+
+
+/* Users */
+
+.users-info, .training-categories-info, .trainings-info {
+    display: flex;
+}
+
+.users-info-content, .training-categories-info-content, .trainings-info-content {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & h2 {
+        font-size: 30px;
+        text-decoration: underline;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    & a {
+        border: 1px solid var(--color-white);
+        background-color: var(--color-blue-100);
+        padding: 10px;
+        border-radius: 10px;
+        width: fit-content;
+    }
+}

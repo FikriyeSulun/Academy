@@ -7,13 +7,20 @@ import { Link } from "react-router-dom";
 
 export default function UsersInfo() {
     return (
-        <>
-            <div style={{ padding: '300px' }}>
-                Kullanıcılar
-                <br />
-                <Link to={`create-user`}>Kullanıcı Ekle</Link>
+        <section className='users-info'>
+            <div className="container">
+                <div className='users-info-content'>
+                    <h2>Kullanıcılar</h2>
+                    <ul>
+                        <li>kullanıcı 1 <Link to={`update-user`}>Kullanıcı Düzenle</Link></li>
+                        <li>kullanıcı 2 <Link to={`update-user`}>Kullanıcı Düzenle</Link></li>
+                        <li>kullanıcı 3 <Link to={`update-user`}>Kullanıcı Düzenle</Link></li>
+                        <li>kullanıcı 4 <Link to={`update-user`}>Kullanıcı Düzenle</Link></li>
+                    </ul>
+                    <Link to={`create-user`}>Kullanıcı Ekle</Link>
+                </div>
             </div>
-        </>
+        </section>
     )
 
 }

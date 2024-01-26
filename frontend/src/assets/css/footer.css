@@ -26,11 +26,12 @@ footer {
         & .footerLogo {
             border: 1px solid;
             width: 140px;
+            height: 140px;
             margin-right: 40px;
         }
 
         & .document {
-            width: max-content;
+            /* width: max-content; */
             padding: 8px 0 0 0;
             display: flex;
             flex-direction: column;
@@ -46,9 +47,11 @@ footer {
     }
 
     & .footer-header-socials {
+        width: fit-content;
         margin-top: 20px;
         height: 20px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
         & .footer-header-socials__title {
@@ -98,6 +101,7 @@ footer {
     gap: 10px;
 
     & .address {
+        width: fit-content;
         padding-right: 30px;
     }
 
@@ -126,5 +130,15 @@ footer {
         flex-wrap: wrap;
         align-items: center;
         gap: 15px;
+    }
+}
+
+
+/* responsive */
+@media (max-width: 425px) {
+    .footer-header {
+        & a {
+            width: 30px !important;
+        }
     }
 }

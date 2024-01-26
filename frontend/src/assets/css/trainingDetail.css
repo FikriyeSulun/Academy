@@ -1,4 +1,4 @@
-.training-container{
+.training-container {
     display: flex;
     justify-content: center;
 }
@@ -22,5 +22,13 @@
         max-width: 800px;
         text-align: center;
         font-size: 18px;
+    }
+}
+
+.training-bg-img {
+    width: -webkit-fill-available;
+
+    & img {
+        width: -webkit-fill-available;
     }
 }

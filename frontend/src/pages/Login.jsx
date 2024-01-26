@@ -1,10 +1,19 @@
 // Giriş yap sayfası
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '../main'
+import supabase from '../utils/supabaseHelper';
+import {toast} from 'react-toastify';
+import useSession from '../utils/useSession';
 
 export default function Login() {
   const navigate = useNavigate();
+  const session = useSession();
+  
+  useEffect(() => {
+    if(session){
+      navigate('/')
+    }
+  }, [session])
 
   async function login(e) {
     e.preventDefault();
@@ -17,13 +26,11 @@ export default function Login() {
     })
 
     if (error) {
-      alert('Böyle bir kullanıcı bulunamadı. Hatalı kullanıcı adı veya hatalı şifre girişi yapmış olabilirsiniz.');
+      toast.error('Böyle bir kullanıcı bulunamadı. Hatalı kullanıcı adı veya hatalı şifre girişi yapmış olabilirsiniz.');
+    }else{
+      navigate('/')
     }
 
-    console.log(user);
-    console.log(user.name); //yok çekemiyorum
-
-    navigate('/');
   }
 
   return (
@@ -33,8 +40,8 @@ export default function Login() {
           <div className="loginForm">
             <h2>Giriş Yap</h2>
             <form onSubmit={login}>
-              <p><input required type="email" name='email' placeholder='E-Posta' /></p>
-              <p><input required type="password" name='password' placeholder='Şifre' /></p>
+              <p><input autoComplete='off' required type="email" name='email' placeholder='E-Posta' /></p>
+              <p><input autoComplete='off' required type="password" name='password' placeholder='Şifre' /></p>
               <button>Giriş Yap</button>
             </form>
           </div>

@@ -1,4 +1,4 @@
-.trainingCategories-container{
+.trainingCategories-container {
     display: flex;
     justify-content: center;
 }
@@ -25,6 +25,14 @@
     }
 }
 
+.trainingCategories-bg-img {
+    width: -webkit-fill-available;
+
+    & img {
+        width: -webkit-fill-available;
+    }
+}
+
 /* responsive */
 @media (min-width: 1200px) and (max-width: 1399px) {
     .trainingCategories-content {
@@ -38,9 +46,9 @@
             font-size: 15px;
         }
     }
-  }
-  
-  @media (max-width: 1199px) {
+}
+
+@media (max-width: 1199px) {
     .trainingCategories-content {
         gap: 20px;
 
@@ -52,5 +60,5 @@
             font-size: 13px;
         }
     }
-  
-  }
+
+}

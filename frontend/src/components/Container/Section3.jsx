@@ -1,18 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-import { fetchInstructors } from '../../data/InstructorsData';
+import { getInstructors } from '../../data/getData';
 
 export default function Section3() {
   const [instructors, setInstructors] = useState([]);
   const [currentCard, setCurrentCard] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(4);
 
   useEffect(() => {
 
-    fetchInstructors().then((instructors) => {
+    getInstructors().then((instructors) => {
       // console.log('Instructors:', instructors);
       setInstructors(instructors);
     });
+
+    // Ekran genişliğine göre kart sayısını güncelle
+    const updateCardCount = () => {
+      if (window.innerWidth < 426) {
+        setCardsToShow(1)
+      } else if (window.innerWidth < 769) {
+        setCardsToShow(2);
+      } else if (window.innerWidth < 1024) {
+        setCardsToShow(3);
+      } else {
+        setCardsToShow(4);
+      }
+    };
+
+    // Sayfa yüklendiğinde ve ekran boyutu değiştiğinde kontrol et
+    window.addEventListener('resize', updateCardCount);
+    updateCardCount();
+
+    return () => {
+      // Event listener'ı temizle
+      window.removeEventListener('resize', updateCardCount);
+    };
 
   }, []);
 
@@ -27,7 +50,7 @@ export default function Section3() {
     }
   };
 
-  const cardsToShow = instructors.slice(currentCard, currentCard + 4);
+  const cardsToShowArray = instructors.slice(currentCard, currentCard + cardsToShow);
 
   return (
     <section className='all-instructors'>
@@ -49,7 +72,7 @@ export default function Section3() {
             <div className="slider">
 
               {
-                cardsToShow.map(instructor => (
+                cardsToShowArray.map(instructor => (
                   <div className="instructors-card" key={instructor.id}>
                     <Link to={`/instructors/${instructor.categoryName.toLowerCase()}/${instructor.urlName}`}>
 

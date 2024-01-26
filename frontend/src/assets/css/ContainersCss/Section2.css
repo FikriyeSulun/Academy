@@ -11,6 +11,7 @@
 
 .training-categories {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -41,7 +42,7 @@
 .training-card {
     height: 320px;
     width: 230px;
-    margin: 0 15px;
+    margin: 15px;
     background-color: var(--color-blue-90);
     color: var(--color-blue-250);
     border-radius: 8px;
@@ -93,3 +94,9 @@
         color: var(--color-white) !important;
     }
 }
+
+@media (max-width: 1270px) {
+    .training-cards {
+        flex-wrap: wrap;
+    }
+  }

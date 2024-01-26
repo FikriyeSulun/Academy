@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-import { fetchTrainingCategories } from '../../data/TrainingCategoriesData';
-import { fetchCourses } from '../../data/CoursesData';
+import { getTrainingCategories, getCourses} from '../../data/getData';
 
 export default function SectionCourses() {
     const [trainingCategories, setTrainingCategories] = useState([]);
@@ -11,12 +10,12 @@ export default function SectionCourses() {
     const [selectedCategory, setSelectedCategory] = useState(1);
 
     useEffect(() => {
-        fetchTrainingCategories().then((categories) => {
+        getTrainingCategories().then((categories) => {
             // console.log('Training Categories:', categories);
             setTrainingCategories(categories);
         });
 
-        fetchCourses().then((courses) => {
+        getCourses().then((courses) => {
             console.log('Courses:', courses);
             setCourses(courses);
         });
